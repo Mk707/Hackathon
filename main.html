@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>One Octave Piano</title>
+  <style>
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background: #f4f4f4;
+    }
+
+    .piano {
+      position: relative;
+      width: 560px;
+      height: 200px;
+      border: 2px solid #444;
+      display: flex;
+    }
+
+    .key {
+      border: 1px solid #333;
+      width: 70px;
+      height: 100%;
+      background: white;
+      position: relative;
+      z-index: 1;
+      box-sizing: border-box;
+    }
+
+    .key.black {
+      width: 40px;
+      height: 120px;
+      background: black;
+      position: absolute;
+      top: 0;
+      z-index: 2;
+    }
+
+    .key.active {
+      background: #87ceeb !important;
+    }
+
+    /* Position black keys */
+    .black.csharp { left: 50px; }
+    .black.dsharp { left: 120px; }
+    .black.fsharp { left: 260px; }
+    .black.gsharp { left: 330px; }
+    .black.asharp { left: 400px; }
+  </style>
+</head>
+<body>
+
+<div class="piano">
+  <!-- White keys -->
+  <div class="key" data-note="C4"></div>
+  <div class="key" data-note="D4"></div>
+  <div class="key" data-note="E4"></div>
+  <div class="key" data-note="F4"></div>
+  <div class="key" data-note="G4"></div>
+  <div class="key" data-note="A4"></div>
+  <div class="key" data-note="B4"></div>
+  <div class="key" data-note="C5"></div>
+
+  <!-- Black keys -->
+  <div class="key black csharp" data-note="C#4"></div>
+  <div class="key black dsharp" data-note="D#4"></div>
+  <div class="key black fsharp" data-note="F#4"></div>
+  <div class="key black gsharp" data-note="G#4"></div>
+  <div class="key black asharp" data-note="A#4"></div>
+</div>
+
+</body>
+</html>
